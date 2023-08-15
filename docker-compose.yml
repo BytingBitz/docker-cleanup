@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   docker-cleanup:
+    container_name: cleaner
     build: .
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
