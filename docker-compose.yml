@@ -14,3 +14,9 @@ services:
           memory: 200M
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - web
+
+networks:
+  web:
+    name: cleaner_web
