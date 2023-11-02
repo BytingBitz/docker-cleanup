@@ -1,8 +1,11 @@
 #!/bin/sh
 
 while true; do
-    docker image prune -a -f
-    docker system prune -a -f
-    docker network prune
-    sleep 86400 # 24 hours
+    # Prune everything that is not actively in use, except containers
+    # docker container prune -f
+    docker network prune -f
+    docker image prune -f
+    docker volume prune -f
+    docker builder prune -f
+    sleep 86400 # Execute once every 24 hours
 done
