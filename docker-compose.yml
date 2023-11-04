@@ -5,7 +5,7 @@ services:
     read_only: true
     container_name: cleaner
     build: .
-    restart: any
+    restart: always
     cpus: '0.2'
     mem_limit: 200M
     volumes:
