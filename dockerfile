@@ -1,6 +1,4 @@
-FROM alpine:latest
-
-RUN apk add --no-cache docker-cli
+FROM docker:latest
 
 COPY cleanup.sh /cleanup.sh
 RUN chmod +x /cleanup.sh
